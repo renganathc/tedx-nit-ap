@@ -34,7 +34,7 @@ export default function PaymentSuccessPage() {
           </div>
 
           <div className="bg-gray-800 p-6 rounded-lg border border-gray-600 mb-8">
-            <h3 className="text-xl font-semibold mb-4">What's Next?</h3>
+            <h3 className="text-xl font-semibold mb-4">What&apos;s Next?</h3>
             <div className="space-y-3 text-left">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-tedred rounded-full mt-2 flex-shrink-0"></div>
