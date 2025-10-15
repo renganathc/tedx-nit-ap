@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <HomeFirst />
       {/* <Event /> */}
-      {/* <AnimatedText />
-      <PastSpeakers /> */}
+      <AnimatedText />
+      <PastSpeakers />
     </>
   );
 }

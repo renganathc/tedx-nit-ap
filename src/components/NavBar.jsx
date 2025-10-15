@@ -32,25 +32,28 @@ export default function NavBar() {
     <>
       <div
         ref={nav}
-        className="z-20 fixed top-0 flex justify-between p-2 items-center h-[5rem] w-full "
+        className="z-20 fixed top-0 flex justify-between p-2 items-center h-[8rem] w-full "
       >
         {/* <div className="z-10 sticky top-0 bg-black/95 bg-opacity-80 backdrop-blur flex justify-between p-2 items-center h-[5rem] w-full "> */}
-        <div className="w-[15rem] sm:pl-[3rem] flex gap-2 pl-2 justify-start ">
+        <div className="sm:pl-[3rem] flex gap-2 pl-2 justify-start ">
           {/* <div className="w-[5rem] bg-green-100"></div> */}
           <Link href={"/"}>
-            <div className="flex-col justify-center">
-              <div className="font-helvitica -mb-1  font-extrabold text-xl text-[#FF2B06]">
-                TED<sup>x</sup>
+            <div className="flex flex-col justify-center gap-1">
+              <div className="flex flex-col gap-2">
+                <div className="font-helvetica font-extrabold text-[1.8rem] text-[#FF2B06] -mb-1">
+                  TED<sup>x</sup>
+                </div>
+                <div className="font-light text-[1.4rem] text-white -mt-3">
+                  NITAndhraPradesh
+                </div>
               </div>
-              <div className="font-light -mt-1 text-[0.8rem] text-white">
-                NIT Andhra Pradesh
-              </div>
-              <div className="-mt-[0.7rem]">
+
+              {/* <div className="-mt-[0.1rem] flex items-center gap-1">
                 <span className="text-tedred text-[0.5rem]">x=</span>
                 <span className="text-white text-[0.5rem]">
                   Independently Organized TED Event
                 </span>
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>
