@@ -60,7 +60,7 @@ export default function HomeFirst() {
             ))}
           </div>
 
-          <div className="mt-6 animate-pop-in">
+          <div className="mt-10 animate-pop-in md:mt-6">
             <GetYourTickets />
           </div>
         </div>

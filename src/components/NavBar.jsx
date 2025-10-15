@@ -35,7 +35,7 @@ export default function NavBar() {
         className="z-20 fixed top-0 flex justify-between p-2 items-center h-[8rem] w-full "
       >
         {/* <div className="z-10 sticky top-0 bg-black/95 bg-opacity-80 backdrop-blur flex justify-between p-2 items-center h-[5rem] w-full "> */}
-        <div className="sm:pl-[3rem] flex gap-2 pl-2 justify-start ">
+        <div className="sm:pl-[3rem] flex gap-2 pl-6 justify-start ">
           {/* <div className="w-[5rem] bg-green-100"></div> */}
           <Link href={"/"}>
             <div className="flex flex-col justify-center gap-1">
@@ -77,7 +77,7 @@ export default function NavBar() {
         </ul>
 
         <div
-          className="flex sm:hidden group flex-col justify-center h-full  gap-[0.5rem] pr-2"
+          className="flex sm:hidden group flex-col justify-center h-full  gap-[0.5rem] pr-6"
           onClick={() => setIsOpen(true)}
         >
           <div className="duration-150 w-[2rem] h-[0.15rem] rounded-lg bg-white group-hover:bg-tedred"></div>
