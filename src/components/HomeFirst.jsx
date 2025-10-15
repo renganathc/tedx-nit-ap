@@ -1,96 +1,81 @@
+"use client";
+
 import React from "react";
-import to from "../../public/images/1(2).svg";
 import Image from "next/image";
-import GetYourTickets from "./GetYourTickets";
 import { Syne } from "next/font/google";
-import { CiUser } from "react-icons/ci";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
+import { CiUser } from "react-icons/ci";
+import to from "../../public/images/1(2).svg";
+import GetYourTickets from "./GetYourTickets";
+
 const syne = Syne({ subsets: ["latin"] });
 
 export default function HomeFirst() {
   return (
-    <>
-      <div className="flex bg-no-repeat relative top-0 bg-[url('../../public/images/Home.png')] h-[100vh] w-full bg-cover">
-        <div className="p-2 flex-wrap md:flex-nowrap flex-col md:flex-row sm:p-5 sm:pl-[3rem] sm:gap-6 flex justify-end items-end bg-gradient-to-tr from-black/10 via-black/60 to-tedred/10 backdrop-filter backdrop-blur-sm bg-opacity-45 h-full w-full ">
-          {/* <div> */}
-          {/* <div className="title text-[#FF2B06] text-2xl md:text-3xl">
-            <span className="font-helvitica font-extrabold">
-              TED<sup>x</sup>
-            </span>
-            <span className="text-white font-light">NITAndhraPradesh</span>
-          </div> */}
+    <section className="relative h-screen w-full overflow-hidden bg-black text-white flex items-center justify-center">
 
-          <div className="w-full h-max">
-            <div className="text-white text-3xl w-full h-full justify-end items-start sm:text-5xl flex gap-5 flex-col">
-              <p
-                className={`text-[3.5rem] sm:text-[5.1rem] opacity-5 leading-none text-white font-bold ${syne.className}`}
-              >
-                ALCHEMY
-              </p>
-              <p
-                className={`text-[3.5rem] sm:text-[5.1rem] opacity-20 leading-none text-white font-bold ${syne.className}`}
-              >
-                ALCHEMY
-              </p>
-              <p
-                className={`text-[3.5rem] sm:text-[5.1rem] leading-none text-white font-bold ${syne.className}`}
-              >
-                ALCHEMY
-              </p>{" "}
-              <p className="font-light text-[0.9rem] sm:text-[1.5rem] gap-2 md:text-[2rem] flex-wrap inline-flex items-center">
-                Transformation of{" "}
-                <span className="font-poppins"> Ordinary</span>{" "}
-                <span className="font-poppins inline-flex items-center">
-                  <Image
-                    alt="to"
-                    src={to}
-                    width={500}
-                    height={500}
-                    className="w-[1.5rem] md:w-[2.3rem]"
-                  />{" "}
-                  <span className=" text-tedred ">o</span>{" "}
-                </span>
-                <span className="font-poppins">Extraordinary</span>
-              </p>
-            </div>
+      <Image
+        src="/images/main_page_image.png"
+        alt="background"
+        fill
+        className="object-cover object-center z-10 opacity-20"
+      />
+
+      {/* main container */}
+      <div className="relative z-10 flex flex-row items-center justify-between w-11/12 max-w-7xl mx-auto lg:gap-10">
+        
+        <div className="flex flex-col items-center lg:items-start md:gap-4 lg:gap-6 w-full lg:w-[55%]">
+          <div className="relative">
+            <h1 className={`text-4xl sm:text-4xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-red-600 via-red-550 to-red-500 bg-clip-text text-transparent tracking-tight ${syne.className} animate-text-reveal`} >
+              TESSELATE
+            </h1>
+            <span className="absolute left-0 bottom-0 h-[3px] w-0 bg-gradient-to-r from-red-500 to-yellow-400 animate-line-expand"></span>
           </div>
-          <div className="flex flex-col items-start md:items-end w-full justify-between mb- sm:py-0 py-9 gap-3">
-            <div className="flex sm:text-base flex-col items-start text-[1rem] md:items-end text-white justify-between gap-2">
-              <div className="flex md:flex-row flex-row-reverse gap-2 ">
-                <p className="font-medium">5th October, 2 PM - 6 PM, 2024</p>
-                <AiOutlineCalendar
-                  size={30}
-                  className="scale-75 sm:scale-100 text-tedred"
-                />
-              </div>
 
-              <div className="flex md:flex-row flex-row-reverse gap-2">
-                <p className="font-medium">NIT Andhra Pradesh</p>
-                <IoLocationOutline
-                  size={30}
-                  className="text-tedred scale-75 sm:scale-100"
-                />
-              </div>
+          {/* subtitl e */}
+          <p className="text-lg text-center lg:text-left sm:text-base md:text-xl lg:text-2xl text-gray-300 max-w-xl leading-relaxed animate-fadein">
+            From <span className="font-semibold text-white">Fragments</span>{" "}
+            <span className="inline-flex items-center">
+              <Image src={to} alt="to" width={27} height={27} className="w-6 sm:w-7 relative top-1" />
+              <span className="text-red-500 font-bold relative top-1 right-[2px] text-2xl">o</span>
+            </span>{" "}
+            <span className="font-semibold text-white">Form</span>.  
+            A celebration of ideas, innovation, and imagination.
+          </p>
 
-              <div className="flex md:flex-row flex-row-reverse gap-2">
-                <p className="font-medium">6 Speakers</p>
-                <CiUser
-                  size={30}
-                  className="text-tedred scale-75 sm:scale-100"
-                />
+          <div className="flex flex-col lg:flex-row md:flex-wrap gap-4 mt-10 animate-slide-up md:mt-4">
+            {[
+              { Icon: AiOutlineCalendar, text: "1st November, 2-6 PM, 2025" },
+              { Icon: IoLocationOutline, text: "NIT Andhra Pradesh" },
+              { Icon: CiUser, text: "6 Speakers" },
+            ].map(({ Icon, text }, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-xl rounded-xl p-3 px-5 shadow-lg hover:scale-105 transition-transform duration-300 border border-white/10"
+              >
+                <Icon size={24} className="text-red-500" />
+                <span className="text-sm font-medium sm:text-[13px] md:text-[15-px] lg:text-[15px]">{text}</span>
               </div>
-            </div>
-            <br />
+            ))}
+          </div>
+
+          <div className="mt-10 animate-pop-in md:mt-6">
             <GetYourTickets />
           </div>
         </div>
-        {/* <div className="h-full overflow-clip flex justify-center items-center  w-[40%] bg-[#ff2b06]"> */}
-        {/*   <p className="tracking-tighter p-0 m-0 font-helvitica font-extrabold text-[15rem] sm:text-[18rem] text-white transform rotate-90"> */}
-        {/*     TED<sup>x</sup> */}
-        {/*   </p> */}
-        {/* </div>{" "} */}
+
+        <div className="relative w-0 lg:w-[45%] overflow-hidden rounded-3xl shadow-2xl animate-fadein-slow">
+          <Image
+            src="/images/main_page_image.png"
+            width={1200}
+            height={1200}
+            className="w-full h-auto object-contain object-center"
+            alt="TEDx NIT AP"
+          />
+        </div>
       </div>
-    </>
+
+    </section>
   );
 }
