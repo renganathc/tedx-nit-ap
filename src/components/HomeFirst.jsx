@@ -16,18 +16,18 @@ export default function HomeFirst() {
     <section className="relative h-screen w-full overflow-hidden bg-black text-white flex items-center justify-center">
 
       {/* main container */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-11/12 max-w-7xl mx-auto gap-10">
+      <div className="relative z-10 flex flex-row items-center justify-between w-11/12 max-w-7xl mx-auto md:gap-10">
         
-        <div className="flex flex-col items-start gap-6 w-full md:w-[60%]">
+        <div className="flex flex-col items-center md:items-start md:gap-4 lg:gap-6 w-full md:w-[50%] lg:w-[60%] md:scale-40 lg:scale-100">
           <div className="relative">
-            <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-red-600 via-red-550 to-red-500 bg-clip-text text-transparent tracking-tight ${syne.className} animate-text-reveal`} >
+            <h1 className={`text-4xl sm:text-4xl mdl:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-red-600 via-red-550 to-red-500 bg-clip-text text-transparent tracking-tight ${syne.className} animate-text-reveal`} >
               TESSELATE
             </h1>
             <span className="absolute left-0 bottom-0 h-[3px] w-0 bg-gradient-to-r from-red-500 to-yellow-400 animate-line-expand"></span>
           </div>
 
           {/* subtitl e */}
-          <p className="text-lg md:text-2xl text-gray-300 max-w-xl leading-relaxed animate-fadein">
+          <p className="text-lg text-center md:text-left sm:text-lg mdl:text-xl lg:text-2xl text-gray-300 max-w-xl leading-relaxed animate-fadein">
             From <span className="font-semibold text-white">Fragments</span>{" "}
             <span className="inline-flex items-center">
               <Image src={to} alt="to" width={27} height={27} className="w-6 sm:w-7 relative top-1" />
@@ -37,7 +37,7 @@ export default function HomeFirst() {
             A celebration of ideas, innovation, and imagination.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-4 animate-slide-up">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-4 animate-slide-up">
             {[
               { Icon: AiOutlineCalendar, text: "1st November, 2-6 PM, 2025" },
               { Icon: IoLocationOutline, text: "NIT Andhra Pradesh" },
@@ -58,7 +58,7 @@ export default function HomeFirst() {
           </div>
         </div>
 
-        <div className="relative w-full md:w-[40%] overflow-hidden rounded-3xl shadow-2xl animate-fadein-slow">
+        <div className="relative w-0 md:w-[50%] lg:w-[40%] overflow-hidden rounded-3xl shadow-2xl animate-fadein-slow">
           <Image
             src="/images/main_page_image.png"
             width={1200}
